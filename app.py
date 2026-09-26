@@ -3,9 +3,7 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-# ------------------------------------------------------------------
 # Konfigurasi halaman
-# ------------------------------------------------------------------
 st.set_page_config(
     page_title="Segmentasi Engagement Facebook Live",
     page_icon="📊",
@@ -17,9 +15,7 @@ SCALER_PATH = "scaler.pkl"
 FEATURES_PATH = "cluster_features.pkl"
 
 
-# ------------------------------------------------------------------
 # Load model & scaler (di-cache agar tidak reload setiap interaksi)
-# ------------------------------------------------------------------
 @st.cache_resource
 def load_artifacts():
     try:
@@ -103,15 +99,11 @@ def predict_cluster(model, scaler, features, reactions, comments, shares):
     return cluster
 
 
-# ------------------------------------------------------------------
 # Load semua artefak
-# ------------------------------------------------------------------
 model, scaler, features = load_artifacts()
 label_map, color_map, description_map, centroid_profile = get_cluster_label_map(model, scaler)
 
-# ------------------------------------------------------------------
 # Header
-# ------------------------------------------------------------------
 st.title("📊 Segmentasi Engagement Facebook Live Sellers")
 st.markdown(
     "Masukkan metrik engagement sebuah postingan untuk mengetahui segmennya, "
