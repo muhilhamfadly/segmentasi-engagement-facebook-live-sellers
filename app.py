@@ -78,17 +78,17 @@ def get_cluster_label_map(_model, _scaler):
     description_map = {
         "Engagement Rendah": (
             "Reaksi, komentar, dan share sama-sama rendah. Konten jenis ini "
-            "kurang menarik perhatian audiens — perlu dievaluasi ulang dari "
+            "kurang menarik perhatian audiens, perlu dievaluasi ulang dari "
             "sisi topik, waktu tayang, atau format."
         ),
         "Viral & Banyak Diperdebatkan": (
             "Reaksi, komentar, dan share sama-sama tinggi. Konten ini berhasil "
-            "memicu diskusi aktif dan tersebar luas — cocok dijadikan referensi "
+            "memicu diskusi aktif dan tersebar luas, cocok dijadikan referensi "
             "format live selling interaktif."
         ),
         "Populer namun Pasif": (
             "Reaksi tinggi, tetapi komentar dan share rendah. Konten disukai "
-            "secara pasif tanpa memicu diskusi lebih lanjut — cocok untuk "
+            "secara pasif tanpa memicu diskusi lebih lanjut, cocok untuk "
             "showcase produk singkat."
         ),
     }
